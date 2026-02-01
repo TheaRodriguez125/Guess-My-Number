@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafaf8;
+  padding: 25px 25px;
+
+  display: flex;
+  justify-content: center;
+
+  font-family: raleway;
+  color: #676663;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+
+  border: 2px solid #676663;
+  padding: 25px 25px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+
+  /* padding-bottom: 40px; */
+  /* border-bottom: 2px solid #676663; */
+}
+
+header h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+header .number {
+  width: 175px;
+  height: 175px;
+  border: 4px dashed #676663;
+  border-radius: 10px;
+  background-color: #efede6;
+
+  font-size: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .number,
+main .score,
+main .highscore {
+  font-family: 'Open Sans', sans-serif;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .left {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main .guess {
+  border: 2px solid #676663;
+  border-radius: 10px;
+
+  padding: 10px;
+  background-color: #fafaf8;
+  color: #676663;
+
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+main .guess::placeholder {
+  color: #676663;
+}
+
+main .guess:focus {
+  outline: none;
+}
+
+main .guess:disabled {
+  opacity: 0.5;
+}
+
+main .btn {
+  font-family: raleway;
+  font-size: 25px;
+
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+main .check {
+  background-color: #efede6;
+  border: 2px solid #676663;
+  color: #676663;
+  margin-bottom: 20px;
+}
+
+main .check:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+main .check:hover {
+  background-color: #dad8d1;
+}
+
+main .again {
+  background-color: #676663;
+  color: #fafaf8;
+}
+
+main .again:hover {
+  background-color: #676663b2;
+}
+
+main .right {
+  width: 40%;
+}
+
+main p {
+  font-size: 25px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+main .message {
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+main .label-score {
+  background-color: #efede6;
+  line-height: 40px;
+
+  margin-bottom: 10px;
+}
+
+main .label-highscore {
+  background-color: #efede67c;
+  line-height: 40px;
+}
+
+@media (max-width: 730px) {
+  main {
+    flex-direction: column-reverse;
+  }
+
+  main .left,
+  main .right {
+    width: 100%;
+  }
+
+  main .right {
+    margin-bottom: 50px;
+  }
+}

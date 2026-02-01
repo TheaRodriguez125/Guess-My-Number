@@ -1,0 +1,64 @@
+JavaScript Notes
+
+document.querySelector('.message');
+-> Selects the html with the .message class. Always put inside '' (ex. 'body', '.message', '#message').
+
+document.querySelector('.message').textContent;
+document.querySelector('.guess').value;
+document.querySelector('.message').style.backgroundColor; -->css property, instead of background-color use camelCase, best used when u want to access a single value only
+
+document.querySelector('.message').textContent = 'New Message';
+document.querySelector('.score').textContent = 15;
+document.querySelector('.guess').value = 20;
+document.querySelector('.guess').value = '';
+document.querySelector('.message').style.backgroundColor = '#fff'; --> always inside '' (ex. '30px').
+
+document.querySelector('.again').addEventListener('click', function () {});
+
+Math.random() number between 0(inclusive) and 1 (exclusive)
+Math.trunc() removes decimals
+
+
+
+// additional
+
+const modal = document.querySelector('.modal'); 
+--> putting in a variable for easier access
+
+const btnOpenModal = document.querySelectorAll('.show-modal'); 
+--> as querySelector only accesses the first html element with the said class, you use querySelectorAll to access all those with the said class
+
+
+
+ex. <div class="modal hidden"> --> contains two classes, modal and hidden
+
+document.querySelector('.modal').classList.remove('hidden') or modal.classList.remove('hidden');
+--> this removes the class .hidden, better used on multiple css properties or easier access. only written as the name (ex. 'hidden' instead of '.hidden')
+
+modal.classList.add('hidden');
+--> this adds the specified class
+
+modal.classList.contains('hidden')
+--> check whether the said class is present
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+for (let i = 0; i < btnOpenModal.length; i++)
+  btnOpenModal[i].addEventListener('click', openModal);
+--> adds an event listener on all of the html element selected by the document.querySelectorAll('.show-modal'). openModal was called without () as you don't want to run the function as soon as the line was read.
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+});
+
+--> document.addEventListener('keydown', function (e) {}) is used when you want to add an event listener for keyboard press, e is a parameter (can be anything) this just says that as the event occurs javascript will call this function with the event object as the argument
+
+as key down will listen on all buttons pressed, you can filter it using the e argument to choose what button is needed.
+
+e.key = 'Escape'
+e.key = 'Enter' etc (there are a lot more argument you can check thru console.log(e).)
+
+you can see that in here that you call the function inside the if else statement with a ().
