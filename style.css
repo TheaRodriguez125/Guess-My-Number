@@ -96,7 +96,7 @@ main .guess {
 }
 
 main .guess::placeholder {
-  color: #676663;
+  color: #dfddd6;
 }
 
 main .guess:focus {
@@ -184,5 +184,45 @@ main .label-highscore {
 
   main .right {
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  header p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  main p {
+    font-size: 20px;
+  }
+
+  main .message {
+    margin-bottom: 30px;
+  }
+
+  main .label-score,
+  main .label-highscore {
+    line-height: 30px;
+  }
+
+  main .right {
+    margin-bottom: 40px;
+  }
+
+  main .guess {
+    font-size: 30px;
+  }
+
+  main .btn {
+    font-size: 20px;
   }
 }

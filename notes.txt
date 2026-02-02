@@ -62,3 +62,22 @@ e.key = 'Escape'
 e.key = 'Enter' etc (there are a lot more argument you can check thru console.log(e).)
 
 you can see that in here that you call the function inside the if else statement with a ().
+
+
+// additional
+
+to select an id you can either use 
+const score0El = document.querySelector('#score--0'); uses # to specify its an ID
+const score0El = document.getElementById('score--0'); only inputs the name of the ID, no # needed.
+
+player0El.classList.toggle('player--active');
+--> toggle checks whether the said class is present, if YES it removes it, if NO it adds it.
+
+const diceEl = document.querySelector('.dice');
+diceEl.src = `images/dice-${dice}.svg`;
+--> this changes the src of the image with the dice class
+
+document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+-->template literals can be useful when selecting variable based on conditions
+
+
